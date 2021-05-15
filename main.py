@@ -3,13 +3,6 @@ import sys
 from PyQt5 import QtWidgets
 from mydesign import Ui_MainWindow
 
-def last_word(str):
-    tmp_list = []
-    for n in str:
-        tmp_list.append(n)
-    tmp_list.reverse()
-    return str(tmp_list)
-
 class mywindow(QtWidgets.QMainWindow):
     def __init__(self):
         super(mywindow, self).__init__()
@@ -46,10 +39,12 @@ class mywindow(QtWidgets.QMainWindow):
             self.tmp += '1'
         else:
             self.active = False
-            if last_word(self.tmp) == '.':
+            if self.tmp[-1] == '.':
                 self.ui.lcdNumber.display(str(self.ui.lcdNumber.value()) + '1')
+                self.tmp += '1'
             else:
                 self.ui.lcdNumber.display(str(self.ui.lcdNumber.intValue()) + '1')
+                self.tmp += '1'
 
     def btn2Clicked(self):
         if self.active == True:
@@ -60,10 +55,12 @@ class mywindow(QtWidgets.QMainWindow):
             self.tmp += '2'
         else:
             self.active = False
-            if last_word(self.tmp) == '.':
+            if self.tmp[-1] == '.':
                 self.ui.lcdNumber.display(str(self.ui.lcdNumber.value()) + '2')
+                self.tmp += '2'
             else:
                 self.ui.lcdNumber.display(str(self.ui.lcdNumber.intValue()) + '2')
+                self.tmp += '2'
     def btn3Clicked(self):
         if self.active == True:
             self.ui.lcdNumber.display('')
@@ -73,10 +70,12 @@ class mywindow(QtWidgets.QMainWindow):
             self.tmp += '3'
         else:
             self.active = False
-            if last_word(self.tmp) == '.':
+            if self.tmp[-1] == '.':
                 self.ui.lcdNumber.display(str(self.ui.lcdNumber.value()) + '3')
+                self.tmp += '3'
             else:
                 self.ui.lcdNumber.display(str(self.ui.lcdNumber.intValue()) + '3')
+                self.tmp += '3'
     def btn4Clicked(self):
         if self.active == True:
             self.ui.lcdNumber.display('')
@@ -86,10 +85,12 @@ class mywindow(QtWidgets.QMainWindow):
             self.tmp += '4'
         else:
             self.active = False
-            if last_word(self.tmp) == '.':
+            if self.tmp[-1] == '.':
                 self.ui.lcdNumber.display(str(self.ui.lcdNumber.value()) + '4')
+                self.tmp += '4'
             else:
                 self.ui.lcdNumber.display(str(self.ui.lcdNumber.intValue()) + '4')
+                self.tmp += '4'
     def btn5Clicked(self):
         if self.active == True:
             self.ui.lcdNumber.display('')
@@ -99,10 +100,12 @@ class mywindow(QtWidgets.QMainWindow):
             self.tmp += '5'
         else:
             self.active = False
-            if last_word(self.tmp) == '.':
+            if self.tmp[-1] == '.':
                 self.ui.lcdNumber.display(str(self.ui.lcdNumber.value()) + '5')
+                self.tmp += '5'
             else:
                 self.ui.lcdNumber.display(str(self.ui.lcdNumber.intValue()) + '5')
+                self.tmp += '5'
     def btn6Clicked(self):
         if self.active == True:
             self.ui.lcdNumber.display('')
@@ -112,10 +115,12 @@ class mywindow(QtWidgets.QMainWindow):
             self.tmp += '6'
         else:
             self.active = False
-            if last_word(self.tmp) == '.':
+            if self.tmp[-1] == '.':
                 self.ui.lcdNumber.display(str(self.ui.lcdNumber.value()) + '6')
+                self.tmp += '6'
             else:
                 self.ui.lcdNumber.display(str(self.ui.lcdNumber.intValue()) + '6')
+                self.tmp += '6'
     def btn7Clicked(self):
         if self.active == True:
             self.ui.lcdNumber.display('')
@@ -125,10 +130,12 @@ class mywindow(QtWidgets.QMainWindow):
             self.tmp += '7'
         else:
             self.active = False
-            if last_word(self.tmp) == '.':
+            if self.tmp[-1] == '.':
                 self.ui.lcdNumber.display(str(self.ui.lcdNumber.value()) + '7')
+                self.tmp += '7'
             else:
                 self.ui.lcdNumber.display(str(self.ui.lcdNumber.intValue()) + '7')
+                self.tmp += '7'
     def btn8Clicked(self):
         if self.active == True:
             self.ui.lcdNumber.display('')
@@ -138,10 +145,12 @@ class mywindow(QtWidgets.QMainWindow):
             self.tmp += '8'
         else:
             self.active = False
-            if last_word(self.tmp) == '.':
+            if self.tmp[-1] == '.':
                 self.ui.lcdNumber.display(str(self.ui.lcdNumber.value()) + '8')
+                self.tmp += '8'
             else:
                 self.ui.lcdNumber.display(str(self.ui.lcdNumber.intValue()) + '8')
+                self.tmp += '8'
     def btn9Clicked(self):
         if self.active == True:
             self.ui.lcdNumber.display('')
@@ -151,10 +160,12 @@ class mywindow(QtWidgets.QMainWindow):
             self.tmp += '9'
         else:
             self.active = False
-            if last_word(self.tmp) == '.':
+            if self.tmp[-1] == '.':
                 self.ui.lcdNumber.display(str(self.ui.lcdNumber.value()) + '9')
+                self.tmp += '9'
             else:
                 self.ui.lcdNumber.display(str(self.ui.lcdNumber.intValue()) + '9')
+                self.tmp += '9'
     def btn0Clicked(self):
         if self.active == True:
             self.ui.lcdNumber.display('')
@@ -164,10 +175,12 @@ class mywindow(QtWidgets.QMainWindow):
             self.tmp += '0'
         else:
             self.active = False
-            if last_word(self.tmp) == '.':
+            if self.tmp[-1] == '.':
                 self.ui.lcdNumber.display(str(self.ui.lcdNumber.value()) + '0')
+                self.tmp += '0'
             else:
                 self.ui.lcdNumber.display(str(self.ui.lcdNumber.intValue()) + '0')
+                self.tmp += '0'
     def btnDotClicked(self):
         if self.active == True:
             self.ui.lcdNumber.display('')
