@@ -9,7 +9,6 @@ class mywindow(QtWidgets.QMainWindow):
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
         self.tmp = ''
-        self.tmp2 = ''
         self.active = False
 
         self.ui.btn1.clicked.connect(self.btn1Clicked)
@@ -33,7 +32,7 @@ class mywindow(QtWidgets.QMainWindow):
     def btn1Clicked(self):
         if self.active == True:
             self.ui.lcdNumber.display('')
-        if self.ui.lcdNumber.intValue() == 0:
+        if str(self.ui.lcdNumber.intValue()) == '0' and self.tmp[-1] != '.':
             self.active = False
             self.ui.lcdNumber.display('1')
             self.tmp += '1'
@@ -49,7 +48,7 @@ class mywindow(QtWidgets.QMainWindow):
     def btn2Clicked(self):
         if self.active == True:
             self.ui.lcdNumber.display('')
-        if self.ui.lcdNumber.intValue() == 0:
+        if str(self.ui.lcdNumber.intValue()) == '0' and self.tmp[-1] != '.':
             self.active = False
             self.ui.lcdNumber.display('2')
             self.tmp += '2'
@@ -64,7 +63,7 @@ class mywindow(QtWidgets.QMainWindow):
     def btn3Clicked(self):
         if self.active == True:
             self.ui.lcdNumber.display('')
-        if self.ui.lcdNumber.intValue() == 0:
+        if str(self.ui.lcdNumber.intValue()) == '0' and self.tmp[-1] != '.':
             self.active = False
             self.ui.lcdNumber.display('3')
             self.tmp += '3'
@@ -79,7 +78,7 @@ class mywindow(QtWidgets.QMainWindow):
     def btn4Clicked(self):
         if self.active == True:
             self.ui.lcdNumber.display('')
-        if self.ui.lcdNumber.intValue() == 0:
+        if str(self.ui.lcdNumber.intValue()) == '0' and self.tmp[-1] != '.':
             self.active = False
             self.ui.lcdNumber.display('4')
             self.tmp += '4'
@@ -94,7 +93,7 @@ class mywindow(QtWidgets.QMainWindow):
     def btn5Clicked(self):
         if self.active == True:
             self.ui.lcdNumber.display('')
-        if self.ui.lcdNumber.intValue() == 0:
+        if str(self.ui.lcdNumber.intValue()) == '0' and self.tmp[-1] != '.':
             self.active = False
             self.ui.lcdNumber.display('5')
             self.tmp += '5'
@@ -109,7 +108,7 @@ class mywindow(QtWidgets.QMainWindow):
     def btn6Clicked(self):
         if self.active == True:
             self.ui.lcdNumber.display('')
-        if self.ui.lcdNumber.intValue() == 0:
+        if str(self.ui.lcdNumber.intValue()) == '0' and self.tmp[-1] != '.':
             self.active = False
             self.ui.lcdNumber.display('6')
             self.tmp += '6'
@@ -124,7 +123,7 @@ class mywindow(QtWidgets.QMainWindow):
     def btn7Clicked(self):
         if self.active == True:
             self.ui.lcdNumber.display('')
-        if self.ui.lcdNumber.intValue() == 0:
+        if str(self.ui.lcdNumber.intValue()) == '0' and self.tmp[-1] != '.':
             self.active = False
             self.ui.lcdNumber.display('7')
             self.tmp += '7'
@@ -139,7 +138,7 @@ class mywindow(QtWidgets.QMainWindow):
     def btn8Clicked(self):
         if self.active == True:
             self.ui.lcdNumber.display('')
-        if self.ui.lcdNumber.intValue() == 0:
+        if str(self.ui.lcdNumber.intValue()) == '0' and self.tmp[-1] != '.':
             self.active = False
             self.ui.lcdNumber.display('8')
             self.tmp += '8'
@@ -154,7 +153,7 @@ class mywindow(QtWidgets.QMainWindow):
     def btn9Clicked(self):
         if self.active == True:
             self.ui.lcdNumber.display('')
-        if self.ui.lcdNumber.intValue() == 0:
+        if str(self.ui.lcdNumber.intValue()) == '0' and self.tmp[-1] != '.':
             self.active = False
             self.ui.lcdNumber.display('9')
             self.tmp += '9'
@@ -169,7 +168,7 @@ class mywindow(QtWidgets.QMainWindow):
     def btn0Clicked(self):
         if self.active == True:
             self.ui.lcdNumber.display('')
-        if self.ui.lcdNumber.intValue() == 0:
+        if str(self.ui.lcdNumber.intValue()) == '0' and self.tmp[-1] != '.':
             self.active = False
             self.ui.lcdNumber.display('0')
             self.tmp += '0'
@@ -185,8 +184,8 @@ class mywindow(QtWidgets.QMainWindow):
         if self.active == True:
             self.ui.lcdNumber.display('')
         self.active = False
-        self.ui.lcdNumber.display(str(self.ui.lcdNumber.intValue()) + '.')
         self.tmp += '.'
+        self.ui.lcdNumber.display(str(self.ui.lcdNumber.intValue()) + '.')
 #####################
     def btnPlusClicked(self):
         if self.tmp != '':
@@ -209,10 +208,6 @@ class mywindow(QtWidgets.QMainWindow):
             self.ui.lcdNumber.display(str(eval(self.tmp)))
             self.tmp = ''
             self.active = True
-
-
-
-
 
 app = QtWidgets.QApplication([])
 application = mywindow()
