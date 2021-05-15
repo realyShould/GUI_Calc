@@ -30,156 +30,176 @@ class mywindow(QtWidgets.QMainWindow):
         self.ui.end.clicked.connect(self.endClicked)
 
     def btn1Clicked(self):
+        self.tmp += '1'
         if self.active == True:
             self.ui.lcdNumber.display('')
-        if str(self.ui.lcdNumber.intValue()) == '0' and self.tmp[-1] != '.':
-            self.active = False
-            self.ui.lcdNumber.display('1')
-            self.tmp += '1'
+        if str(self.ui.lcdNumber.intValue()) == '0':
+            try:
+                if self.tmp[-1] != '.':
+                    self.active = False
+                    self.ui.lcdNumber.display('1')
+            except:
+                pass
         else:
             self.active = False
             if self.tmp[-1] == '.':
                 self.ui.lcdNumber.display(str(self.ui.lcdNumber.value()) + '1')
-                self.tmp += '1'
             else:
                 self.ui.lcdNumber.display(str(self.ui.lcdNumber.intValue()) + '1')
-                self.tmp += '1'
 
     def btn2Clicked(self):
+        self.tmp += '2'
         if self.active == True:
             self.ui.lcdNumber.display('')
-        if str(self.ui.lcdNumber.intValue()) == '0' and self.tmp[-1] != '.':
-            self.active = False
-            self.ui.lcdNumber.display('2')
-            self.tmp += '2'
+        if str(self.ui.lcdNumber.intValue()) == '0':
+            try:
+                if self.tmp[-1] != '.':
+                    self.active = False
+                    self.ui.lcdNumber.display('2')
+            except:
+                pass
         else:
             self.active = False
             if self.tmp[-1] == '.':
                 self.ui.lcdNumber.display(str(self.ui.lcdNumber.value()) + '2')
-                self.tmp += '2'
             else:
                 self.ui.lcdNumber.display(str(self.ui.lcdNumber.intValue()) + '2')
-                self.tmp += '2'
     def btn3Clicked(self):
+        self.tmp += '3'
         if self.active == True:
             self.ui.lcdNumber.display('')
-        if str(self.ui.lcdNumber.intValue()) == '0' and self.tmp[-1] != '.':
-            self.active = False
-            self.ui.lcdNumber.display('3')
-            self.tmp += '3'
+        if str(self.ui.lcdNumber.intValue()) == '0':
+            try:
+                if self.tmp[-1] != '.':
+                    self.active = False
+                    self.ui.lcdNumber.display('3')
+            except:
+                pass
         else:
             self.active = False
             if self.tmp[-1] == '.':
                 self.ui.lcdNumber.display(str(self.ui.lcdNumber.value()) + '3')
-                self.tmp += '3'
             else:
                 self.ui.lcdNumber.display(str(self.ui.lcdNumber.intValue()) + '3')
-                self.tmp += '3'
     def btn4Clicked(self):
+        self.tmp += '4'
         if self.active == True:
             self.ui.lcdNumber.display('')
-        if str(self.ui.lcdNumber.intValue()) == '0' and self.tmp[-1] != '.':
-            self.active = False
-            self.ui.lcdNumber.display('4')
-            self.tmp += '4'
+        if str(self.ui.lcdNumber.intValue()) == '0':
+            try:
+                if self.tmp[-1] != '.':
+                    self.active = False
+                    self.ui.lcdNumber.display('4')
+            except:
+                pass
         else:
             self.active = False
             if self.tmp[-1] == '.':
                 self.ui.lcdNumber.display(str(self.ui.lcdNumber.value()) + '4')
-                self.tmp += '4'
             else:
                 self.ui.lcdNumber.display(str(self.ui.lcdNumber.intValue()) + '4')
-                self.tmp += '4'
     def btn5Clicked(self):
+        self.tmp += '5'
         if self.active == True:
             self.ui.lcdNumber.display('')
-        if str(self.ui.lcdNumber.intValue()) == '0' and self.tmp[-1] != '.':
-            self.active = False
-            self.ui.lcdNumber.display('5')
-            self.tmp += '5'
+        if str(self.ui.lcdNumber.intValue()) == '0':
+            try:
+                if self.tmp[-1] != '.':
+                    self.active = False
+                    self.ui.lcdNumber.display('5')
+            except:
+                pass
         else:
             self.active = False
             if self.tmp[-1] == '.':
                 self.ui.lcdNumber.display(str(self.ui.lcdNumber.value()) + '5')
-                self.tmp += '5'
             else:
                 self.ui.lcdNumber.display(str(self.ui.lcdNumber.intValue()) + '5')
-                self.tmp += '5'
     def btn6Clicked(self):
+        self.tmp += '6'
         if self.active == True:
             self.ui.lcdNumber.display('')
-        if str(self.ui.lcdNumber.intValue()) == '0' and self.tmp[-1] != '.':
-            self.active = False
-            self.ui.lcdNumber.display('6')
-            self.tmp += '6'
+        if str(self.ui.lcdNumber.intValue()) == '0':
+            try:
+                if self.tmp[-1] != '.':
+                    self.active = False
+                    self.ui.lcdNumber.display('6')
+            except:
+                pass
         else:
             self.active = False
             if self.tmp[-1] == '.':
                 self.ui.lcdNumber.display(str(self.ui.lcdNumber.value()) + '6')
-                self.tmp += '6'
             else:
                 self.ui.lcdNumber.display(str(self.ui.lcdNumber.intValue()) + '6')
-                self.tmp += '6'
     def btn7Clicked(self):
+        self.tmp += '7'
         if self.active == True:
             self.ui.lcdNumber.display('')
-        if str(self.ui.lcdNumber.intValue()) == '0' and self.tmp[-1] != '.':
-            self.active = False
-            self.ui.lcdNumber.display('7')
-            self.tmp += '7'
+        if str(self.ui.lcdNumber.intValue()) == '0':
+            try:
+                if self.tmp[-1] != '.':
+                    self.active = False
+                    self.ui.lcdNumber.display('7')
+            except:
+                pass
         else:
             self.active = False
             if self.tmp[-1] == '.':
                 self.ui.lcdNumber.display(str(self.ui.lcdNumber.value()) + '7')
-                self.tmp += '7'
             else:
                 self.ui.lcdNumber.display(str(self.ui.lcdNumber.intValue()) + '7')
-                self.tmp += '7'
     def btn8Clicked(self):
+        self.tmp += '8'
         if self.active == True:
             self.ui.lcdNumber.display('')
-        if str(self.ui.lcdNumber.intValue()) == '0' and self.tmp[-1] != '.':
-            self.active = False
-            self.ui.lcdNumber.display('8')
-            self.tmp += '8'
+        if str(self.ui.lcdNumber.intValue()) == '0':
+            try:
+                if self.tmp[-1] != '.':
+                    self.active = False
+                    self.ui.lcdNumber.display('8')
+            except:
+                pass
         else:
             self.active = False
             if self.tmp[-1] == '.':
                 self.ui.lcdNumber.display(str(self.ui.lcdNumber.value()) + '8')
-                self.tmp += '8'
             else:
                 self.ui.lcdNumber.display(str(self.ui.lcdNumber.intValue()) + '8')
-                self.tmp += '8'
     def btn9Clicked(self):
+        self.tmp += '9'
         if self.active == True:
             self.ui.lcdNumber.display('')
-        if str(self.ui.lcdNumber.intValue()) == '0' and self.tmp[-1] != '.':
-            self.active = False
-            self.ui.lcdNumber.display('9')
-            self.tmp += '9'
+        if str(self.ui.lcdNumber.intValue()) == '0':
+            try:
+                if self.tmp[-1] != '.':
+                    self.active = False
+                    self.ui.lcdNumber.display('9')
+            except:
+                pass
         else:
             self.active = False
             if self.tmp[-1] == '.':
                 self.ui.lcdNumber.display(str(self.ui.lcdNumber.value()) + '9')
-                self.tmp += '9'
             else:
                 self.ui.lcdNumber.display(str(self.ui.lcdNumber.intValue()) + '9')
-                self.tmp += '9'
     def btn0Clicked(self):
+        self.tmp += '0'
         if self.active == True:
             self.ui.lcdNumber.display('')
-        if str(self.ui.lcdNumber.intValue()) == '0' and self.tmp[-1] != '.':
-            self.active = False
-            self.ui.lcdNumber.display('0')
-            self.tmp += '0'
+        if str(self.ui.lcdNumber.intValue()) == '0':
+            try:
+                if self.tmp[-1] != '.':
+                    self.active = False
+                    self.ui.lcdNumber.display('0')
+            except:
+                pass
         else:
             self.active = False
             if self.tmp[-1] == '.':
                 self.ui.lcdNumber.display(str(self.ui.lcdNumber.value()) + '0')
-                self.tmp += '0'
             else:
                 self.ui.lcdNumber.display(str(self.ui.lcdNumber.intValue()) + '0')
-                self.tmp += '0'
     def btnDotClicked(self):
         if self.active == True:
             self.ui.lcdNumber.display('')
